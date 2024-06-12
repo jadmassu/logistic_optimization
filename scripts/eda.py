@@ -21,37 +21,37 @@ class ExploratoryDataAnalysis:
     
         return value_counts
 
-    def value_counts_summary(self, column1, column2, display_columns=None):
-        if not isinstance(self.df, pd.DataFrame):
-            print("Input is not a DataFrame.")
-            return None
+    # def value_counts_summary(self, column1, column2, display_columns=None):
+    #     if not isinstance(self.df, pd.DataFrame):
+    #         print("Input is not a DataFrame.")
+    #         return None
         
-        # Check if both columns exist in the DataFrame
-        # if column1 not in self.df.columns or column2 not in self.df.columns:
-        #     print(f"One or both columns '{column1}' and '{column2}' do not exist in the DataFrame.")
-        #     return None
+    #     # Check if both columns exist in the DataFrame
+    #     # if column1 not in self.df.columns or column2 not in self.df.columns:
+    #     #     print(f"One or both columns '{column1}' and '{column2}' do not exist in the DataFrame.")
+    #     #     return None
         
-        # Group by the two columns and count occurrences
-        grouped = self.df.groupby([column1, column2]).size().reset_index(name='count')
+    #     # Group by the two columns and count occurrences
+    #     grouped = self.df.groupby([column1, column2]).size().reset_index(name='count')
         
-        # Step 2: Filter groups that have more than one occurrence
-        filtered_groups = grouped[grouped['count'] > 1]
+    #     # Step 2: Filter groups that have more than one occurrence
+    #     filtered_groups = grouped[grouped['count'] > 1]
         
-        # Step 3: Use these groups to filter the original DataFrame
-        # Create a mask to filter the original DataFrame
-        mask = self.df.set_index([column1, column2]).index.isin(filtered_groups.set_index([column1, column2]).index)
-        filtered_df = self.df[mask]
+    #     # Step 3: Use these groups to filter the original DataFrame
+    #     # Create a mask to filter the original DataFrame
+    #     mask = self.df.set_index([column1, column2]).index.isin(filtered_groups.set_index([column1, column2]).index)
+    #     filtered_df = self.df[mask]
         
-        # Step 4: If display_columns are specified, include them
-        if display_columns:
-            if not all(col in self.df.columns for col in display_columns):
-                print("One or more display_columns do not exist in the DataFrame.")
-                return None
+    #     # Step 4: If display_columns are specified, include them
+    #     if display_columns:
+    #         if not all(col in self.df.columns for col in display_columns):
+    #             print("One or more display_columns do not exist in the DataFrame.")
+    #             return None
             
-            # Select only the necessary columns
-            filtered_df = filtered_df[display_columns + [column1, column2]]
+    #         # Select only the necessary columns
+    #         filtered_df = filtered_df[display_columns + [column1, column2]]
         
-        return filtered_df
+    #     return filtered_df
 
     def handle_missing_values(self, strategy="mean"):
         try:
@@ -71,7 +71,8 @@ class ExploratoryDataAnalysis:
                 print("Unknown strategy! No missing values were handled.")
         except Exception as e:
             print(f"An error occurred while handling missing values: {e}")
-    
+    def get_data(self):
+        return self.df
     def detect_outliers(self, method="zscore"):
         try:
             if method == "zscore":
@@ -139,3 +140,4 @@ class ExploratoryDataAnalysis:
             print(f"An error occurred during bivariate analysis: {e}")
             return None, None
     
+ 
