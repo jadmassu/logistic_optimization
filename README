@@ -49,30 +49,6 @@ The project focuses on analyzing delivery data to identify the reasons behind un
    ```
 
 
-## Code Structure
-
-    ├── data
-    │   ├── raw              # Original data files
-    │   ├── processed        # Cleaned and prepped data
-    │   └── ...
-    ├── notebook
-    │   ├── exploratory      # Initial data exploration
-    │   ├── analysis         # In-depth data analysis
-    │   ├── modeling         # Model development
-    │   └── ...
-    ├── results
-    │   ├── figures          # Visualizations
-    │   ├── models           # Trained models
-    │   └── ...
-    ├── scripts
-    │   ├── data_processing  # Data cleaning and transformation
-    │   ├── modeling         # Model training and evaluation
-    │   ├── deployment       # Model deployment
-    │   └── ...
-    ├── utils                # Utility scripts
-    ├── requirements.txt     # Python dependencies
-    ├── README.md            # Project documentation
-    └── ...
 
 
 ### License
