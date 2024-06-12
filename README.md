@@ -1,6 +1,4 @@
-# Logistic optimization: Delivery drivers location optimisation with Causal Inference 
-
-
+# Logistic optimization: Delivery drivers location optimisation with Causal Inference
 
 ## Table of Contents
 
@@ -8,7 +6,6 @@
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
 - [Project Structure](#project-structure)
-
 
 ## Project Overview
 
@@ -25,31 +22,31 @@ The project focuses on analyzing delivery data to identify the reasons behind un
 
 - Python 3.x
 
-
 ### Installation
 
 1. **Clone the Repository**
+
    ```sh
    git clone https://github.com/jadmassu/logistic_optimization.git
 
    ```
+
 2. **Set Up Virtual Environment**
    ```sh
-   conda activate base   # replace base with your environment name 
-   anaconda-navigator    
+   conda activate base   # replace base with your environment name
+   anaconda-navigator
    ```
 3. **Install Requirements**
+
    ```sh
    pip install -r requirements.txt
-  
-   ```
-4. **Set Up Virtual Environment**
-```sh
-   Create a .env file and add the following variables
-   ```env
-   
+
    ```
 
+4. **Set Up Virtual Environment**
+   ```sh
+   Create a .env file and add the following variables
+   ```
 
 ## Code Structure
 
@@ -76,8 +73,6 @@ The project focuses on analyzing delivery data to identify the reasons behind un
     ├── README.md            # Project documentation
     └── ...
 
-
 ### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
