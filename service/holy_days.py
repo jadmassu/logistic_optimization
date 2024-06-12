@@ -21,6 +21,7 @@ class HolidayFetcher:
             holidays = response.json().get('response', {}).get('holidays', [])
             holiday_dates = [holiday['date']['iso'] for holiday in holidays]
             self.holidays_cache[year] = holiday_dates
+            print(holiday_dates)
             return holiday_dates
         else:
             print(f"Error: {response.status_code}")
@@ -49,5 +50,5 @@ class HolidayFetcher:
         holidays = self.get_holidays_for_dates()
 
         # Add 'Holiday' column to DataFrame
-        df['Holiday'] = df[date_column_name].apply(lambda x: any(x.date().isoformat() in holidays[date.isoformat()] for date in self.dates))
+        df['Holiday'] = df[date_column_name].apply(lambda x: any(x.date().isoformat() in holidays[date.isoformat()] for date in self.date))
         return df

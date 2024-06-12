@@ -6,6 +6,7 @@ class WeekdayAdder:
         self.df = df
 
     def is_weekday(self, date):
+        print("is weekday",date.weekday() < 5)
         return date.weekday() < 5  # Monday=0, Sunday=6; weekdays are 0 to 4
 
     def add_weekday_column(self,):
