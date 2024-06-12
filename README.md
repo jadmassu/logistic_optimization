@@ -1,4 +1,4 @@
-# Logistic optimization: Delivery drivers location optimisation with Causal Inference
+# Logistic optimization: Delivery drivers location optimization with Causal Inference
 
 ## Table of Contents
 
