@@ -65,9 +65,8 @@ The project focuses on analyzing delivery data to identify the reasons behind un
     │   └── ...
     ├── scripts
     │   ├── data_processing  # Data cleaning and transformation
-    │   ├── modeling         # Model training and evaluation
-    │   ├── deployment       # Model deployment
     │   └── ...
+    ├── service              # Services for communicating with external API
     ├── utils                # Utility scripts
     ├── requirements.txt     # Python dependencies
     ├── README.md            # Project documentation
